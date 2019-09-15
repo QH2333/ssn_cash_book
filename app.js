@@ -9,7 +9,20 @@ App({
     // 登录
     wx.login({
       success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        wx.request({
+          //url: 'http://139.155.29.56:8080/SmartBillBackend/Login',
+          url: 'http://localhost:8080/SmartBillBackend/Login',
+          data: {
+            code: res.code
+          },
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          success: res => {
+            this.globalData.openID = res.data;
+            console.log(res.data)
+          }
+        })
       }
     })
     // 获取用户信息
