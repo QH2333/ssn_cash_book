@@ -10,8 +10,8 @@ App({
     wx.login({
       success: res => {
         wx.request({
-          //url: 'http://139.155.29.56:8080/SmartBillBackend/Login',
-          url: 'http://localhost:8080/SmartBillBackend/Login',
+          url: 'http://139.155.29.56:8080/SmartBillBackend/Login',
+          //url: 'http://localhost:8080/SmartBillBackend/Login',
           data: {
             code: res.code
           },
