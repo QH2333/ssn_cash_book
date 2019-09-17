@@ -1,3 +1,15 @@
+# 后端部署
+
+1. 打开`` 139.155.29.56:8080``，点进右边三个灰色按钮中的Manager App，登录
+
+2. 找到Applications栏里面的``/SmartBillBackend``，把它Undeploy卸载掉
+
+3. 在Deploy栏中的WAR file to deploy里选择仓库中的.war文件并上传，点Deploy就可以部署
+
+**现在服务器上已经部署了后端应用，只有修改了以后需要重新部署**
+
+
+
 # 数据库描述
 
 账本列表Table
