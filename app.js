@@ -29,6 +29,8 @@ App({
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
+          this.globalData.authorized = true;
+          console.log("已经授权");
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
@@ -38,6 +40,7 @@ App({
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {
+                console.log("运行了getUserInfo的回调函数")
                 this.userInfoReadyCallback(res)
               }
             }
@@ -48,5 +51,6 @@ App({
   },
   globalData: {
     userInfo: null,
+    authorized: false,
   }
 })

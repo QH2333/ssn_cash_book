@@ -1,4 +1,24 @@
 /**index.wxss**/
+.h1 {
+  padding-left: 100rpx;
+  padding-top: 100rpx;
+  font-size: 100rpx;
+  color: #bbb;
+}
+
+.h2 {
+  padding-left: 100rpx;
+  padding-top: 25rpx;
+  font-size: 80rpx;
+}
+
+.enter {
+  margin-top: 25rpx;
+  margin-left: 100rpx;
+  margin-right: 200rpx;
+  align-content: left;
+}
+
 .userinfo {
   display: flex;
   flex-direction: column;
