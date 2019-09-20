@@ -2,13 +2,15 @@
   "pages": [
     "pages/index/index",
     "pages/welcome/welcome",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/openbill",
+    "pages/openbill/openbill"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#8997F0",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json"
 }

@@ -11,9 +11,11 @@
   <view class="usermotto">
     <text class="user-motto">{{app.globalData.openID}}</text>
   </view> -->
+  <br/>
+  <br/>
   <label class="h1">欢迎使用</label>
   <label class="h2">碎碎念记账本</label>
   <view>
-    <button class="enter" bindtap="toIndex">进入小程序</button>
+    <button class="enter" bindtap="toIndex" >进入小程序</button>
   </view>
 </view>

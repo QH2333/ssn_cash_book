@@ -1,4 +1,18 @@
 <!--index.wxml-->
 <view class="container">
-  首页
+  <view class="row">
+    <view class="col s12 m6">
+      <view class="card blue-grey darken-1">
+        <view class="card-content white-text">
+          <view class="card-title">Bill-1</view>
+          <view>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</view>
+        </view>
+        <view class="card-action">
+          <a href="#">This is a link</a>
+          <a href="#">This is a link</a>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

@@ -3,20 +3,28 @@
   padding-left: 100rpx;
   padding-top: 100rpx;
   font-size: 100rpx;
-  color: #bbb;
+  color: #E2E6FB;
+  margin-top:800rpx;
 }
 
 .h2 {
   padding-left: 100rpx;
   padding-top: 25rpx;
   font-size: 80rpx;
+  color:#8997F0
 }
 
 .enter {
-  margin-top: 25rpx;
+  margin-top: 50rpx;
   margin-left: 100rpx;
   margin-right: 200rpx;
   align-content: left;
+  background-color:#E2E6FB;
+  color:#8997F0;
+  box-shadow: 8rpx 8rpx 8rpx 0rpx grey;
+}
+.enter::after{
+  border:0;
 }
 
 .userinfo {
