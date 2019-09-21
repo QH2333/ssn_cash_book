@@ -1,6 +1,6 @@
 # 后端部署
 
-1. 打开`` 139.155.29.56:8080``，点进右边三个灰色按钮中的Manager App，登录
+1. 打开``139.155.29.56:8080``，点进右边三个灰色按钮中的Manager App，登录
 
 2. 找到Applications栏里面的``/SmartBillBackend``，把它Undeploy卸载掉
 
@@ -63,5 +63,41 @@ GetEntryList(book_id)
 /GetBookList?openid=<openid>
 /AddEntry?date=<date>&in_out=<in_out>&amount=<amount>&classification=<class>&note=<note>&bookid=<bookid>&openid=<openid>
 /GetEntryList?bookid=<bookid>
+```
+
+### Login
+
+```mysql
+select open_id from users where open_id=<openID>
+```
+
+如果数据库里没有openID的记录，那么
+
+```mysql
+insert into users values(0, <openID>)
+```
+
+### CreateBook
+
+```mysql
+insert into booklist values(0, <openID>, NOW(), <name>)
+```
+
+### GetBookList
+
+```mysql
+select * from booklist where open_id=<openID>
+```
+
+### AddEntry
+
+```mysql
+insert into entry values(0, <openID>, NOW(), <in_out>, <amount>, <classification>, <note>, <bookID>)
+```
+
+### GetEntryList
+
+```mysql
+select * from entry where book_id=<bookID>
 ```
 
