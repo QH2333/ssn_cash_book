@@ -34,15 +34,15 @@
 # 数据库代码
 
 ```mysql
-create table users(user_id integer auto_increment, open_id varchar(32) not null, primary key(user_id));
+CREATE TABLE users(user_id integer auto_increment, open_id varchar(32) not null, primary key(user_id));
 ```
 
 ```mysql
-create table booklist(book_id integer auto_increment, open_id varchar(32), create_date date, book_name varchar(64), primary key(book_id));
+CREATE TABLE booklist(book_id integer auto_increment, open_id varchar(32), create_date date, book_name varchar(64), primary key(book_id));
 ```
 
 ```mysql
-create table entry(entry_id integer auto_increment, open_id varchar(32), create_date date, in_out integer not null, amount float not null, classification integer, note varchar(256), primary key(entry_id));
+CREATE TABLE entry(entry_id integer auto_increment, open_id varchar(32), create_date date, in_out integer not null, amount float not null, classification integer, note varchar(256), primary key(entry_id));
 ```
 
 
@@ -55,6 +55,7 @@ CreateBook(name,open_id)
 GetBookList(open_id)
 AddEntry(date,in_out,amount,classification,note,book_id)
 GetEntryList(book_id)
+modifyEntry(entry_id,in_out,amount,classification,note,bookID)
 ```
 
 ```
@@ -63,41 +64,48 @@ GetEntryList(book_id)
 /GetBookList?openid=<openid>
 /AddEntry?date=<date>&in_out=<in_out>&amount=<amount>&classification=<class>&note=<note>&bookid=<bookid>&openid=<openid>
 /GetEntryList?bookid=<bookid>
+/ModifyEntry?&entryid=<entryid>&date=<date>&in_out=<in_out>&amount=<amount>&classification=<class>&note=<note>&bookid=<bookid>
 ```
 
 ### Login
 
 ```mysql
-select open_id from users where open_id=<openID>
+SELECT open_id FROM users WHERE open_id=<openID>
 ```
 
 如果数据库里没有openID的记录，那么
 
 ```mysql
-insert into users values(0, <openID>)
+INSERT INTO users values(0, <openID>)
 ```
 
 ### CreateBook
 
 ```mysql
-insert into booklist values(0, <openID>, NOW(), <name>)
+insert INTO booklist values(0, <openID>, NOW(), <name>)
 ```
 
 ### GetBookList
 
 ```mysql
-select * from booklist where open_id=<openID>
+SELECT * FROM booklist WHERE open_id=<openID>
 ```
 
 ### AddEntry
 
 ```mysql
-insert into entry values(0, <openID>, NOW(), <in_out>, <amount>, <classification>, <note>, <bookID>)
+INSERT INTO entry values(0, <openID>, NOW(), <in_out>, <amount>, <classification>, <note>, <bookID>)
 ```
 
 ### GetEntryList
 
 ```mysql
-select * from entry where book_id=<bookID>
+SELECT * FROM entry WHERE book_id=<bookID>
+```
+
+### ModifyEntry
+
+```mysql
+UPDATE entry SET in_out=<in_out>, amount=<amount>, classification=<classification>, note =<note> WHERE entry_id=<entry_id>
 ```
 
