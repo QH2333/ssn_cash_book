@@ -15,19 +15,19 @@
 账本列表Table
 
 - INT	编号
-  STRING	主人的openid
-  DATE	创建日期
-  STRING	名称
+- STRING	主人的openid
+- DATE	创建日期
+- STRING	名称
 
 账本Table
 
 - INT	编号
-  STRING	主人的openid
-  DATE	消费日期
-  BOOL	收/支
-  INT	金额
-  INT	分类
-  STRING	备注
+- STRING	主人的openid
+- DATE	消费日期
+- BOOL	收/支
+- INT	金额
+- INT	分类
+- STRING	备注
 
 
 

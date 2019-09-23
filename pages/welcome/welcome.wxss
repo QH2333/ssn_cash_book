@@ -1,17 +1,22 @@
 /**index.wxss**/
+
+page {
+  background-color: #8997F0;
+}
+
 .h1 {
   padding-left: 100rpx;
   padding-top: 100rpx;
   font-size: 100rpx;
   color: #E2E6FB;
-  margin-top:800rpx;
+  margin-top: 500rpx;
 }
 
 .h2 {
   padding-left: 100rpx;
   padding-top: 25rpx;
   font-size: 80rpx;
-  color:#8997F0
+  color:#FFFFFF;
 }
 
 .enter {
@@ -21,29 +26,10 @@
   align-content: left;
   background-color:#E2E6FB;
   color:#8997F0;
-  box-shadow: 8rpx 8rpx 8rpx 0rpx grey;
+  box-shadow: 5rpx 5rpx 5rpx 0rpx grey;
 }
+
 .enter::after{
   border:0;
 }
 
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
-}

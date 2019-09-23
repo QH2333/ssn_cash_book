@@ -6,25 +6,7 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    // 登录
-    wx.login({
-      success: res => {
-        wx.request({
-          url: 'http://139.155.29.56:8080/SmartBillBackend/Login',
-          //url: 'http://localhost:8080/SmartBillBackend/Login',
-          data: {
-            code: res.code
-          },
-          header: {
-            'content-type': 'application/json' // 默认值
-          },
-          success: res => {
-            this.globalData.openID = res.data;
-            console.log(res.data)
-          }
-        })
-      }
-    })
+    
     // 获取用户信息
     wx.getSetting({
       success: res => {
