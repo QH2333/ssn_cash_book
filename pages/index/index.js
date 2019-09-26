@@ -6,6 +6,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    openID: "",
     bookList: [],
   },
   //事件处理函数
@@ -15,11 +16,28 @@ Page({
     if (!notFirst) {
       wx.setStorageSync("notFirst", true)
       wx.navigateTo({
-        url: '../welcome/welcome'
+        url: '../welcome/welcome',
       })
     }
     // 登录
     this.login();
+  },
+  onTap: function(event) {
+    var id = event.currentTarget.dataset.id;
+    console.log(id);
+  },
+  onCreate: function(event) {
+    var page = this;
+    wx.navigateTo({
+      url: '../createbook/createbook',
+      success: function (res) {
+        // 通过eventChannel向被打开页面传送数据
+        res.eventChannel.emit('sendOpenID', { openID: page.data.openID })
+      }
+    })
+  },
+  onPullDownRefresh: function(event) {
+    this.updateBooklist();
   },
   updateBooklist: function() {
     wx.request({
@@ -32,7 +50,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: res => {
-        this.data.bookList = res.data;
+        this.setData({bookList: res.data});
         console.log(res.data)
       }
     })
@@ -60,4 +78,3 @@ Page({
     })
   }
 });
-

@@ -15,4 +15,9 @@
       </view>
     </view>
   </view>
+  <view wx:for="{{bookList}}" wx:key="bookID" data-id="{{item.bookID}}" bindtap="onTap">
+    {{index}}.Book ID:{{item.bookID}}
+    {{index}}.Book Name:{{item.bookName}}
+  </view>
+  <button bindtap="onCreate">创建</button>
 </view>

@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+  <input class="weui-input" focus placeholder="输入账本名称" bindconfirm="onConfirm"/>
+  <button bindtap="onCreate">创建</button>
+</view>

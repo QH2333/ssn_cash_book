@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/welcome/welcome",
     "pages/logs/logs",
-    "pages/openbill/openbill"
+    "pages/openbill/openbill",
+    "pages/createbook/createbook"
   ],
   "window": {
     "backgroundTextStyle": "light",
