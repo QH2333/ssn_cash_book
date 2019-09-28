@@ -9,7 +9,7 @@ Page({
     openID: "",
     bookList: [],
   },
-  //事件处理函数
+  // 打开页面
   onLoad: function () {
     // 如果该用户第一次打开小程序（本地没有缓存），则显示欢迎页面
     var notFirst = wx.getStorageSync("notFirst");
@@ -19,12 +19,22 @@ Page({
         url: '../welcome/welcome',
       })
     }
-    // 登录
     this.login();
   },
+  // 单击账本
   onTap: function(event) {
+    var page = this;
     var id = event.currentTarget.dataset.id;
-    console.log(id);
+    wx.navigateTo({
+      url: '../openbill/openbill',
+      success: function (res) {
+        // 通过eventChannel向被打开页面传送数据
+        res.eventChannel.emit('sendBookInfo', {
+          openID: page.data.openID,
+          bookInfo: page.data.bookList.find(element=>{return element.bookID === id;})
+        })
+      }
+    })
   },
   onCreate: function(event) {
     var page = this;
@@ -36,9 +46,13 @@ Page({
       }
     })
   },
+  // 下拉刷新
   onPullDownRefresh: function(event) {
     this.updateBooklist();
   },
+
+  // 下面是自己写的函数
+  // 从服务器上拉取帐本列表，刷新到屏幕上
   updateBooklist: function() {
     wx.request({
       url: 'http://139.155.29.56:8080/SmartBillBackend/GetBookList',
@@ -53,8 +67,9 @@ Page({
         this.setData({bookList: res.data});
         console.log(res.data)
       }
-    })
+    });
   },
+  // 登录到服务器
   login: function() {
     wx.login({
       success: res => {
@@ -73,8 +88,8 @@ Page({
             // 从服务器中拉取用户的账本信息
             this.updateBooklist();
           }
-        })
+        });
       }
-    })
+    });
   }
 });

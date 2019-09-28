@@ -15,6 +15,8 @@
       </view>
     </view>
   </view>
+
+<!-- 这里需要为所有书的数据添加样式 -->
   <view wx:for="{{bookList}}" wx:key="bookID" data-id="{{item.bookID}}" bindtap="onTap">
     {{index}}.Book ID:{{item.bookID}}
     {{index}}.Book Name:{{item.bookName}}
