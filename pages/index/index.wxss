@@ -28,7 +28,7 @@
   bottom: 0;
   position: fixed;
   margin-bottom: 0rpx;
-  filter:drop-shadow(2rpx 2rpx 5rpx #e2e6fb);
+  filter:drop-shadow(2rpx 2rpx 5rpx #b4b7c9);
 }
 
 
