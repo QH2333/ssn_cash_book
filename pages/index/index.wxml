@@ -12,9 +12,9 @@
       </view>
     </view>
   </view>
-  <!--<button >创建</button>-->
   <icon class="iconfont icon-add" bindtap="onCreate"></icon>
 </view>
+
 <!--弹出框-->
 <view class='toast-box' hidden='{{!ifName}}'>        
 <view class='toastbg'>

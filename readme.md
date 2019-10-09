@@ -109,3 +109,34 @@ SELECT * FROM entry WHERE book_id=<bookID>
 UPDATE entry SET in_out=<in_out>, amount=<amount>, classification=<classification>, note =<note> WHERE entry_id=<entry_id>
 ```
 
+
+
+## 页面
+
+### index
+
+首页，显示所有账本信息
+
+### welcome
+
+欢迎页，第一次打开时显示
+
+### personal
+
+我的数据
+
+### createbook
+
+新建账本页面
+
+### openbill
+
+打开账本，显示账本中的所有账目
+
+### addentry
+
+添加账目页面
+
+### detail
+
+账目详细信息，同时可以修改账目信息
