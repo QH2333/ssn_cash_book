@@ -3,8 +3,6 @@
   <view wx:for="{{bookList}}" wx:key="bookID" data-id="{{item.bookID}}" bindtap="onTap">
     <view class="card">
       <view class="card-title">
-        
-        
         {{item.bookName}}
       </view>
       <view class="card-action">

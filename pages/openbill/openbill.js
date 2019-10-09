@@ -3,8 +3,8 @@ const app = getApp() //获取应用实例
 
 Page({
   data: {
-    bookName: "",
-    bookInfo: undefined
+    bookInfo: undefined,
+    entryList: undefined
   },
   //事件处理函数
   onLoad: function () {
@@ -18,39 +18,37 @@ Page({
         bookInfo: data.bookInfo
       });
       console.log(page.data.bookInfo);
+      page.pullBookInfo(page.data.bookInfo.bookID);
+
     })
+  },
+  addEntry: function() {
+    var page = this;
+    wx.navigateTo({
+      url: '../addentry/addentry',
+      success: function (res) {
+        // 通过eventChannel向被打开页面传送数据
+        res.eventChannel.emit('sendBookID', {
+          openID: page.data.openID,
+          bookID: page.data.bookInfo.bookID
+        })
+      }
+    })
+  },
+  pullBookInfo: function(bookID) {
+    wx.request({
+      url: 'http://139.155.29.56:8080/SmartBillBackend/GetEntryList',
+      //url: 'http://localhost:8080/SmartBillBackend/GetEntryList',
+      data: {
+       bookid: bookID
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: res => {
+        this.setData({ entryList: res.data.reverse() });
+        console.log(res.data)
+      }
+    });
   }
-}
-//onCreate: function(event) {
-  //var page = this;
-  //wx.navigateTo({
-    //url: '../detail/detail',
-    //success: function (res) {
-      // 通过eventChannel向被打开页面传送数据
-      //res.eventChannel.emit('sendOpenID', { openID: page.data.openID }//)
-    //}
-  //})
-//}
-);
-// Component({
-//   /**
-//    * 组件的属性列表
-//    */
-//   properties: {
-
-//   },
-
-//   /**
-//    * 组件的初始数据
-//    */
-//   data: {
-
-//   },
-
-//   /**
-//    * 组件的方法列表
-//    */
-//   methods: {
-
-//   }
-// })
+})

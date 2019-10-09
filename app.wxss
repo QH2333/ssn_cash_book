@@ -12,7 +12,6 @@
   font-family: 'iconfont';  /* project id 1440112 */
   src: url('//at.alicdn.com/t/font_1440112_1umqkuqbhal.eot');
   src: url('//at.alicdn.com/t/font_1440112_1umqkuqbhal.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1440112_1umqkuqbhal.woff2') format('woff2'),
   url('//at.alicdn.com/t/font_1440112_1umqkuqbhal.woff') format('woff'),
   url('//at.alicdn.com/t/font_1440112_1umqkuqbhal.ttf') format('truetype'),
   url('//at.alicdn.com/t/font_1440112_1umqkuqbhal.svg#iconfont') format('svg');

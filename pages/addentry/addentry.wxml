@@ -1,0 +1,6 @@
+<!--pages/addentry.wxml-->
+<view class="container">
+
+  <input class="weui-input" focus placeholder="输入金额" bindconfirm="onConfirm"/>
+  <button bindtap="onAdd">创建</button>
+</view>

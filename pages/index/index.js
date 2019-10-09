@@ -56,7 +56,6 @@ Page({
   updateBooklist: function() {
     wx.request({
       url: 'http://139.155.29.56:8080/SmartBillBackend/GetBookList',
-      //url: 'http://localhost:8080/SmartBillBackend/GetBookList',
       data: {
         openid: this.data.openID
       },

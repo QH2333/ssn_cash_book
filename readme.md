@@ -42,7 +42,7 @@ CREATE TABLE booklist(book_id integer auto_increment, open_id varchar(32), creat
 ```
 
 ```mysql
-CREATE TABLE entry(entry_id integer auto_increment, open_id varchar(32), create_date date, in_out integer not null, amount float not null, classification integer, note varchar(256), primary key(entry_id));
+CREATE TABLE entry(entry_id integer auto_increment, open_id varchar(32), book_id integer not null, create_date date, in_out integer not null, amount float not null, classification integer, note varchar(256), primary key(entry_id));
 ```
 
 
@@ -55,7 +55,7 @@ CreateBook(name,open_id)
 GetBookList(open_id)
 AddEntry(date,in_out,amount,classification,note,book_id)
 GetEntryList(book_id)
-modifyEntry(entry_id,in_out,amount,classification,note,bookID)
+modifyEntry(entry_id,in_out,amount,classification,note,book_id)
 ```
 
 ```

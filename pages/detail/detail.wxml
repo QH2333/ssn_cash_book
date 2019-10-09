@@ -1,2 +1,33 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class="inputmoney">消费金额
+  <input  placeholder="0.00"/>
+  </view>
+    <view class="divLine"></view>
+    <view class='arrow'></view>
+     <text>分类</text>
+         <view class="divLine"></view>
+  <view class="section__title">时间</view>
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker>
+
+    <view class="divLine"></view>
+<view class="page-body">
+  <view class="page-section">
+    <view class="weui-cells__title">备注</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" auto-focus placeholder="在此输入"/>
+      </view>
+    </view>
+
+    <view class="btn-area">
+    <button formType="submit">确定</button>
+    <button formType="reset">取消</button>
+  </view>
+  </view>
+  </view>
+  </form>

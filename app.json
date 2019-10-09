@@ -2,11 +2,11 @@
   "pages": [
     "pages/index/index",
     "pages/welcome/welcome",
-    "pages/logs/logs",
     "pages/openbill/openbill",
     "pages/createbook/createbook",
     "pages/personal/personal",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/addentry/addentry"
   ],
   "window": {
     "backgroundTextStyle": "light",
