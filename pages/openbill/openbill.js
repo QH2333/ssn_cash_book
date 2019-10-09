@@ -20,8 +20,18 @@ Page({
       console.log(page.data.bookInfo);
     })
   }
-});
-
+}
+//onCreate: function(event) {
+  //var page = this;
+  //wx.navigateTo({
+    //url: '../detail/detail',
+    //success: function (res) {
+      // 通过eventChannel向被打开页面传送数据
+      //res.eventChannel.emit('sendOpenID', { openID: page.data.openID }//)
+    //}
+  //})
+//}
+);
 // Component({
 //   /**
 //    * 组件的属性列表

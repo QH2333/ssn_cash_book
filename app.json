@@ -4,7 +4,9 @@
     "pages/welcome/welcome",
     "pages/logs/logs",
     "pages/openbill/openbill",
-    "pages/createbook/createbook"
+    "pages/createbook/createbook",
+    "pages/personal/personal",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -12,5 +14,25 @@
     "navigationBarTitleText": "",
     "navigationBarTextStyle": "white"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "grey",
+    "selectedColor": "#009aff",
+    "backgroundColor": "#0000",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "账单",
+        "selectedIconPath": "pages/images/bill.png",
+        "iconPath": "pages/images/bill1.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的数据",
+        "iconPath": "pages/images/person.png",
+        "selectedIconPath": "pages/images/person1.png"
+      }
+    ]
+  }
 }

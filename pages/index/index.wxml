@@ -1,25 +1,43 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="row">
-    <view class="col s12 m6">
-      <view class="card blue-grey darken-1">
-        <view class="card-content white-text">
-          <view class="card-title">Bill-1</view>
-          <view>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</view>
-        </view>
-        <view class="card-action">
-          <a href="#">This is a link</a>
-          <a href="#">This is a link</a>
-        </view>
+  <view wx:for="{{bookList}}" wx:key="bookID" data-id="{{item.bookID}}" bindtap="onTap">
+    <view class="card">
+      <view class="card-title">
+        
+        
+        {{item.bookName}}
+      </view>
+      <view class="card-action">
+        <icon class="iconfont icon-people">name</icon>
+        <!--上传头像-->
+        <icon class="iconfont icon-money">money</icon>
       </view>
     </view>
   </view>
-
-<!-- 这里需要为所有书的数据添加样式 -->
-  <view wx:for="{{bookList}}" wx:key="bookID" data-id="{{item.bookID}}" bindtap="onTap">
-    {{index}}.Book ID:{{item.bookID}}
-    {{index}}.Book Name:{{item.bookName}}
-  </view>
-  <button bindtap="onCreate">创建</button>
+  <!--<button >创建</button>-->
+  <icon class="iconfont icon-add" bindtap="onCreate"></icon>
 </view>
+<!--弹出框-->
+<view class='toast-box' hidden='{{!ifName}}'>        
+<view class='toastbg'>
+ </view>        
+  <view class='showToast'>            
+   <view class='toast-title'>                
+    <text>修改姓名</text>            
+   </view>            
+   <view class='toast-main'>                
+    <view class='toast-input'>                    
+     <input placeholder='请输入姓名' bindinput='setValue' data-name='stuEidtName'>
+     </input>                
+    </view>            
+   </view>            
+   <view class='toast-button'>                
+    <view class='button1'>                    
+     <button catchtap='cancel'>取消</button>                
+    </view>                
+   <view class='button2'>                    
+    <button catchtap='confirm'>确定</button>                
+   </view>            
+  </view>        
+  </view>    
+  </view>

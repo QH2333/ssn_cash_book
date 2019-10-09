@@ -64,7 +64,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: res => {
-        this.setData({bookList: res.data});
+        this.setData({bookList: res.data.reverse()});
         console.log(res.data)
       }
     });

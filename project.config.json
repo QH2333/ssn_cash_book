@@ -18,7 +18,8 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		}
+		},
+		"nodeModules": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.8.2",
@@ -48,13 +49,19 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 1,
 			"list": [
 				{
 					"id": -1,
 					"name": "welcome",
 					"pathName": "pages/welcome/welcome",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/openbill/openbill",
+					"pathName": "pages/openbill/openbill",
 					"scene": null
 				}
 			]
