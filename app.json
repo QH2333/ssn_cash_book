@@ -5,14 +5,16 @@
     "pages/openbill/openbill",
     "pages/createbook/createbook",
     "pages/personal/personal",
-    "pages/detail/detail",
-    "pages/addentry/addentry"
+    "pages/outcome/detail",
+    "pages/addentry/addentry",
+    "pages/income/income",
+    "pages/classify/classify"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#8997F0",
     "navigationBarTitleText": "",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {

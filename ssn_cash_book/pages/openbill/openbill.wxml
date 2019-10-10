@@ -1,6 +1,0 @@
-<view class="container">
-  <view wx:for="{{entryList}}" wx:key="entryID" data-id="{{item.entryID}}" bindtap="onTap">
-    ID:{{item.entryID}} Amount:{{item.amount}} Note:{{item.note}}
-  </view>
-  <button bindtap="addEntry">添加</button>
-</view>

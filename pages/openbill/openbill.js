@@ -25,7 +25,7 @@ Page({
   addEntry: function() {
     var page = this;
     wx.navigateTo({
-      url: '../addentry/addentry',
+      url: '../outcome/detail',
       success: function (res) {
         // 通过eventChannel向被打开页面传送数据
         res.eventChannel.emit('sendBookID', {
@@ -34,6 +34,9 @@ Page({
         })
       }
     })
+  },
+  onPullDownRefresh: function (event) {
+    this.pullBookInfo(this.data.bookInfo.bookID);
   },
   pullBookInfo: function(bookID) {
     wx.request({
