@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/welcome/welcome",
+    "pages/openbill/openbill",
+    "pages/createbook/createbook",
+    "pages/personal/personal",
+    "pages/outcome/detail",
+    "pages/addentry/addentry",
+    "pages/income/income",
+    "pages/classify/classify"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#8997F0",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#009aff",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "账单",
+        "selectedIconPath": "pages/images/bill.png",
+        "iconPath": "pages/images/bill1.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的数据",
+        "iconPath": "pages/images/person.png",
+        "selectedIconPath": "pages/images/person1.png"
+      }
+    ]
+  }
+}

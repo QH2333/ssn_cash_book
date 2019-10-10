@@ -1,0 +1,35 @@
+/**index.wxss**/
+
+page {
+  background-color: #8997F0;
+}
+
+.h1 {
+  padding-left: 100rpx;
+  padding-top: 100rpx;
+  font-size: 100rpx;
+  color: #E2E6FB;
+  margin-top: 500rpx;
+}
+
+.h2 {
+  padding-left: 100rpx;
+  padding-top: 25rpx;
+  font-size: 80rpx;
+  color:#FFFFFF;
+}
+
+.enter {
+  margin-top: 50rpx;
+  margin-left: 100rpx;
+  margin-right: 200rpx;
+  align-content: left;
+  background-color:#E2E6FB;
+  color:#8997F0;
+  box-shadow: 5rpx 5rpx 5rpx 0rpx grey;
+}
+
+.enter::after{
+  border:0;
+}
+

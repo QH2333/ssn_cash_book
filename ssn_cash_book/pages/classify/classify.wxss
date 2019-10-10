@@ -1,0 +1,49 @@
+/* pages/classify/classify.wxss */
+.circle {
+  width: 70px;
+  height: 70px;
+  border: 0 solid #fff;
+  border-radius: 250px;
+  font-size: 0;
+}
+
+.image {
+  position:relative;
+ margin-left:-7rpx;
+ margin-top:17rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.btn3 {
+  width: 30%;
+  margin-top: 20rpx;
+  background-color: transparent;
+  color: transparent;
+  border-radius: 50rpx;
+}
+button::after
+{
+  border:none;
+}
+
+.adduserorder {
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.viewclass {
+  width: 165rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color:#000000;
+}
+
+.textls {
+  display: flex;
+  flex-direction: row;
+  color:#000000;
+}

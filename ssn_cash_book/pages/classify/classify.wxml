@@ -1,0 +1,52 @@
+<!--pages/classify/classify.wxml-->
+<view class='adduserorder'>
+  <button catchtap="toDetail" class="circle" >
+    <image mode='scaleToFill' src='../images/meals-copy.png'    class='image'>
+    </image> 
+    </button> 
+      <button catchtap="toDetail" class="circle">
+    <image mode='scaleToFill' src='../images/bus-copy.png'    class='image'>
+    </image> 
+    </button> 
+      <button catchtap="toDetail" class="circle">
+    <image mode='scaleToFill' src='../images/shoppingbagalt-copy.png'    class='image'>
+    </image> 
+    </button> 
+      <button catchtap="toDetail" class="circle">
+    <image mode='scaleToFill' src='../images/fushi.png'    class='image'>
+    </image> 
+    </button>   
+    <button catchtap="toDetail" class="circle">
+    <image mode='scaleToFill' src='../images/riyongpin-copy.png'    class='image'>
+    </image> 
+    </button> 
+      </view> 
+
+      <view class='textls '>
+      <view class='viewclass '>   
+       <text class='viewview '>餐饮</text>
+       </view>
+       <view class='viewclass '>    
+       <text class='viewview '>交通</text>
+       </view>
+       <view class='viewclass '>    
+       <text class='viewview '>购物</text>
+       </view>
+       <view class='viewclass '>    
+       <text class='viewview '>服饰</text>
+       </view>
+       <view class='viewclass '>    
+       <text class='viewview '>日用</text>
+       </view>
+       </view>
+
+       <view class='viewclass '>
+       <button  catchtap="LisGomora" mode="widthFix" class="circle"> 
+       <image mode='aspectFill ' src='../images/yiliao-copy.png '  class='image '>
+       </image> 
+       </button>
+       </view> 
+
+       <view class='viewclass '>    
+       <text class='viewview '>医疗</text>
+       </view>
