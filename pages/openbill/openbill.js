@@ -1,6 +1,6 @@
 // pages/openbill/openbill.js
 const app = getApp() //获取应用实例
-
+var util = require('../../utils/util.js');
 Page({
   data: {
     bookInfo: undefined,
@@ -19,8 +19,16 @@ Page({
       });
       console.log(page.data.bookInfo);
       page.pullBookInfo(page.data.bookInfo.bookID);
-
     })
+  },
+  loadTime:function(){
+    var TIME = util.formatTime(new Date());
+
+    this.setData({
+
+      time: TIME
+
+    });
   },
   addEntry: function() {
     var page = this;
@@ -35,9 +43,13 @@ Page({
       }
     })
   },
+  onDateChange: function (event) { // 选择时间
+    this.setData({ date: event.detail.value });
+  },
   onPullDownRefresh: function (event) {
     this.pullBookInfo(this.data.bookInfo.bookID);
   },
+  
   pullBookInfo: function(bookID) {
     wx.request({
       url: 'http://139.155.29.56:8080/SmartBillBackend/GetEntryList',

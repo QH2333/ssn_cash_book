@@ -1,1 +1,53 @@
 /* pages/openbill/openbill.wxss */
+.header {
+  position:fixed;
+  display: flex;
+  width: 100%;
+  background-color: #8997f0;
+  height: 100rpx;
+}
+.wrapper{
+  display:flex;
+  flex-direction:row;
+  text-size-adjust: 200px;
+  margin-left:280rpx;
+   margin-top:30rpx;
+}
+.pic{
+  height:30rpx;
+  width:30rpx;
+}
+.add{
+  height:50rpx;
+  width:50rpx;
+ margin-left:230rpx;
+ margin-top:30rpx;
+}
+
+.divLine {
+  position:absolute;
+  background: #e0e3da;
+  width: 90%;
+  margin-top: 49rpx;
+  margin-bottom: 49rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  height: 2rpx;
+}
+
+.list{
+  display:flex;
+  flex-direction: row;
+  padding-top:50rpx;
+}
+.classify{
+  margin-left:20rpx;
+}
+
+.money{
+  margin-left:530rpx;
+}
+
+.menu{
+  margin-left:20rpx;
+}

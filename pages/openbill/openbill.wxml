@@ -1,6 +1,27 @@
-<view class="container">
-  <view wx:for="{{entryList}}" wx:key="entryID" data-id="{{item.entryID}}" bindtap="onTap">
-    ID:{{item.entryID}} Amount:{{item.amount}} Note:{{item.note}}
+<view class="header">
+    <!-- <view class="menu">
+      <view class="totalout">
+      支出
+      </view>
+      <view class="totalin">
+      收入
+      </view>
+    </view> -->
+    <view class="wrapper">
+    <picker mode="date" fields="month" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="onDateChange" >
+    当前时间{{date}}
+      <image class="pic" src='../images/xiasanjiaoxing.png' ></image>
+    </picker>
   </view>
-  <button bindtap="addEntry">添加</button>
+       <image class="add" src='../images/62tianjia.png' bindtap="addEntry">
+      </image>
 </view>
+
+  <view class="list" wx:for="{{entryList}}" wx:key="entryID" data-id="{{item.entryID}}" bindtap="onTap">
+   <view class="classify">{{item.entryID}}</view>
+  <view class="money">¥{{item.amount}}</view>
+  <view class="divLine"></view>
+  <!-- Note:{{item.note}} -->
+  </view>
+  <!-- <button bindtap="addEntry">添加</button> -->
+  
