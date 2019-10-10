@@ -51,3 +51,8 @@
 .menu{
   margin-left:20rpx;
 }
+
+.listwrapper {
+  padding-top:100rpx;
+  
+}

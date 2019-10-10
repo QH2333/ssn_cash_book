@@ -4,7 +4,8 @@ var util = require('../../utils/util.js');
 Page({
   data: {
     bookInfo: undefined,
-    entryList: undefined
+    entryList: undefined,
+    classInfo: ["餐饮", "交通", "购物", "服饰", "日用"],
   },
   //事件处理函数
   onLoad: function () {

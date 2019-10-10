@@ -16,9 +16,9 @@
 
   <view class="divLine"></view>
 
-  <view class="wrapper">
+  <view class="wrapper" bindtap="chooseClassification">
     <text class="text">分类</text>
-    <view class='arrow'  bindtap="onTap"></view>
+    <view class='arrow'></view>
   </view>
 
   <view class="divLine"></view>

@@ -5,6 +5,7 @@ Page({
     openID: undefined,
     bookID: undefined,
     amount: undefined,
+    classification: undefined,
     currentTab: 0,
     tabArray: ["支出", "收入"]
   },
@@ -29,6 +30,17 @@ Page({
   onDateChange: function (event) { // 选择时间
     this.setData({ date: event.detail.value });
   },
+  chooseClassification: function (event) {
+    var page = this;
+    wx.navigateTo({
+      url: '../classify/classify',
+      success: function (res) {
+        res.eventChannel.on('sendChosenClassification', function (data) {
+          page.setData({classification: data.classification});
+        });
+      }
+    })
+  },
   onAdd: function () { // 确定按钮
     wx.request({
       url: 'http://139.155.29.56:8080/SmartBillBackend/AddEntry',
@@ -37,7 +49,7 @@ Page({
         date: this.data.date,
         in_out: this.data.currentTab,
         amount: this.data.amount,
-        classification: 5,
+        classification: this.data.classification,
         note: this.data.note,
         bookid: this.data.bookID,
         openid: this.data.openID
